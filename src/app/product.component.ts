@@ -3,7 +3,7 @@ import { ProductsDatasource } from "./product.datasource";
 import { Product } from "./product.model";
 
 @Component({
-    selector: "app",
+    selector: "app-root",
     templateUrl: "product.component.html"
 })
 export class ProductComponent{
