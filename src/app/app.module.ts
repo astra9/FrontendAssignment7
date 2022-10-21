@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import { ProductComponent } from './product.component';
+import { FormsModule } from '@angular/forms';
+import { TotalPricePipe } from './totalprice.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    ProductComponent,
+    TotalPricePipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ProductComponent]
 })
 export class AppModule { }
