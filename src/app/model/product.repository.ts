@@ -28,10 +28,6 @@ export class ProductsRepository{
         return this.boughtlist;
     }
 
-    getProduct(id: number): Product | undefined {
-        return this.toBuyList.find(p => p.id===id);
-    }
-
     bought(id: number|undefined){
         let index = this.toBuyList.findIndex( p => p.id===id );
         let boughtProduct = this.toBuyList[index];
