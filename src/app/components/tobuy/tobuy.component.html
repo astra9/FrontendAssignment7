@@ -1,0 +1,16 @@
+<h1>To Buy List</h1>
+<div [ngClass]="'bg-warning container'">
+    <ng-container *ngIf="getProductsToBuy().length!=0">
+        <div [ngClass]="'d-flex flex-row justify-content-center'" *ngFor="let product of getProductsToBuy()">
+            <div  [ngClass]="'mx-3'">Buy {{product.quantity}} {{product.productName}}</div>
+            <div [ngClass]="'mx-3'">Quantity: <input placeholder="quantity" [(ngModel)]="product.quantity" />
+            </div>
+            <div [ngClass]="'mx-3'">
+                <button (click)="bought(product.id)">Bought</button>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="getProductsToBuy().length==0">
+        Everything is bought!
+    </ng-container>
+</div>
