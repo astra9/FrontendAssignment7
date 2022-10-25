@@ -25,7 +25,4 @@ export class TobuyComponent{
         this.productsData.bought(id);
     }
 
-    calculateTotalPrice(product: Product){
-        return product?.pricePerItem*product?.quantity;
-    }
 }
