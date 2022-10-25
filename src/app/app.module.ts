@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { BoughtComponent } from './components/bought/bought.component';
 import { ProductsDatasource } from './model/product.datasource';
 import { ProductsRepository } from './model/product.repository';
+import { ModelModule } from './model/model.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProductsRepository } from './model/product.repository';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ModelModule
   ],
   providers: [
     ProductsDatasource,
