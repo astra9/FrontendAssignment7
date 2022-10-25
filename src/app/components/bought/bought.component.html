@@ -1,16 +1,21 @@
-<h1 [style.marginTop.px]="'50'">Already Bought List</h1>
-<div [ngClass]="'bg-primary container'" >
+
+<div [ngClass]="' container text-center'" >
+    <h1 [style.marginTop.px]="'50'">Already Bought List</h1>
     <ng-container *ngIf="getProductsBought().length!=0">
-        <div [ngClass]="'d-flex flex-row justify-content-center text-white'" *ngFor="let product of getProductsBought()">
-            <span  [ngClass]="'mx-3'" [ngStyle]="tableCellsStyle()">
-                Bought {{product.quantity}} of {{product.productName}} for total price 
-                of {{product.pricePerItem | totalPrice: product.quantity}}
-            </span>
-            <span><button (click)="tobuy(product.id)">Remove!</button></span>
+        <div [ngClass]="'row'">
+            <div [ngClass]="'d-flex col-12 '" *ngFor="let product of getProductsBought(); let odd=odd">
+                    <div [ngClass]="isOdd(odd)">
+                        <span  [ngClass]="'mx-3'" [ngStyle]="tableCellsStyle()">
+                            Bought {{product.quantity}} of {{product.productName}} for total price 
+                            of {{product.pricePerItem | totalPrice: product.quantity}}
+                        </span>
+                        <span><button (click)="tobuy(product.id)">Remove!</button></span>
+                    </div>
+            </div>
         </div>
     </ng-container>
     <ng-container *ngIf="getProductsBought().length==0" >
-        <div [ngClass]="'text-white'">
+        <div [ngClass]="''">
             Nothing bought yet!
         </div>
     </ng-container>

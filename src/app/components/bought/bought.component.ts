@@ -25,4 +25,12 @@ export class BoughtComponent{
         this.productsData.tobuy(id);
     }
 
+    isOdd(odd:boolean): string{
+        if(odd){
+            return "bg-primary col-12 justify-content-center text-white";
+        } else{
+            return "bg-success col-12 justify-content-center text-white"
+        }
+    }
+
 }
