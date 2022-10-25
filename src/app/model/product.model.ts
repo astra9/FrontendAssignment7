@@ -3,7 +3,6 @@ export class Product{
         public id: number,
         public productName: string,
         public quantity: number,
-        public pricePerItem: number,
-        public bought: boolean
+        public pricePerItem: number
     ){}
 }
